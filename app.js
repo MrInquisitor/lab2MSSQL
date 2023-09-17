@@ -27,8 +27,8 @@ app.use((req, res, next) => {
 // 3) MIDDLE ROUTES loading
 const salesRouter = require('./routes/salesRoutes');
 const userRouter = require('./routes/userRoutes');
-//const customerRouter = require('./routes/customerRoutes');
+const customerRouter = require('./routes/customerRoutes');
 app.use('/api/v1/sales', salesRouter);
 app.use('/api/v1/users', userRouter);
-//app.use('/api/v1/customers', customerRouter);
+app.use('/api/v1/customers', customerRouter);
 module.exports = app;

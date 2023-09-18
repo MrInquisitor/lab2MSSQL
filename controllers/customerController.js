@@ -1,6 +1,6 @@
 const db = require('../config/db.manager');
 exports.getAllCustomers = function (req, res) {
-    const salesProduct = db.getSalesProducts().then(results => {
+    const customers = db.getCustomers().then(results => {
         console.log(results);
         res.status(200).json({
             status: 'successfull',
